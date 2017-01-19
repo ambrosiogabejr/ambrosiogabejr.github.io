@@ -6,7 +6,7 @@
 <body>
 
   <header>
-    <div class='logo'>GabeAmbrosio.com</div>
+    <div class='logo' id='logo'>GabeAmbrosio.com</div>
     <div class='topNav'>
         <a class='topNavText' href='../index.html'>HOME</a>
         <a class='topNavText' href='../theVision/index.html'>THE VISION</a>
@@ -65,22 +65,10 @@
               <p class='article'>Clearly define metrics to AEs</p>
               <p class='article'>New Business, New Business, New Business + Low Churn = Budget Overachievement</p>
           </div>
+          
 
-
-          <h1 class='article'>Drive New and Recurring Revenue:</h1>
-          <div class='articleOtherContent'>
-              <p class='article'>1.) Better Hiring and Training</p>
-              <p class='article'>2.) Own your Zone</p>
-              <p class='article'>3.) Non Strategic Account plan</p>
-              <p class='article'>4.) Strategic Account plan</p>
-              <p class='article'>5.) Major Agency Strategy</p>
-              <p class='article'>6.) Automotive Strategy</p>
-              <p class='article'>7.) BluWave Productions</p>
-          </div>
-
-
-          <h1 class='article'>Better Hiring & Training</h1>
-          <div class='articleOtherContent'>
+          <h1 id='article' class='accordion'>Better Hiring & Training</h1>
+          <div class='articleOtherContent' id='articleOtherContent'>
               <p class='article'>Drive New and Recurring Revenue through better Hiring and Training</p>
               <p class='article'>80/20 Hiring Rule</p>
               <p class='article'>Proficiency in knowledge of our tools</p>
@@ -94,8 +82,8 @@
           </div>
 
 
-          <h1 class='article'>Own Your Zone</h1>
-          <div class='articleOtherContent'>
+          <h1 id='article' class='accordion'>Own Your Zone</h1>
+          <div class='articleOtherContent' id='articleOtherContent'>
               <p class='article'>Drive New and Recurring Revenue through increased Zone Ownership</p>
               <p class='article'>We must create a culture of zone focused revenue, this will take a collaborative effort with Research/BI/Marketing/Sales and Digital to come up with a clean/concise story.  What does this do?  It gets AE buy-in.  General Market Sales will be integrated into a new local zone focus culture.</p>
               <p class='article'>AEs will own their zone &mdash; we need to se accountable goals to reach our zone revenue (it's important to maintain a profit for our partnering MSO's)</p>
@@ -106,8 +94,8 @@
           </div>
 
 
-          <h1 class='article'>Non Strategic Account Plan</h1>
-          <div class='articleOtherContent'>
+          <h1 id='article' class='accordion'>Non Strategic Account Plan</h1>
+          <div class='articleOtherContent' id='articleOtherContent'>
               <p class='article'>Drive New and Recurring Revenue through Non Strategic Account Plan</p>
               <p class='article'>If an Local AE loses a $5,000 a month account, how many new accounts will it take to replace it?</p>
               <p class='article'>Volume of accounts is needed to go along with the Strategic Accounts</p>
@@ -118,8 +106,8 @@
           </div>
 
 
-          <h1 class='article'>Strategic Account Plan</h1>
-          <div class='articleOtherContent'>
+          <h1 id='article' class='accordion'>Strategic Account Plan</h1>
+          <div class='articleOtherContent' id='articleOtherContent'>
               <p class='article'>Increase Revenue through Strategic Account Planning</p>
               <p class='article'>DOS and Client Solution Specialist will be key players in the Strategic Account Planning</p>
               <p class='article'>DOS along with the LSMs and AEs will identify Strategic Accounts through history reports, kantar and other research tools</p>
@@ -134,8 +122,8 @@
           </div>
 
 
-          <h1 class='article'>Major Agency Strategy</h1>
-          <div class='articleOtherContent'>
+          <h1 id='article' class='accordion'>Major Agency Strategy</h1>
+          <div class='articleOtherContent' id='articleOtherContent'>
               <p class='article'>Drive New and Recurring Revenue through Major Agency Strategy</p>
               <p class='article'>How do we get agencies on the same side of the table as Comcast Spotlight?</p>
               <p class='article'>Education of our products</p>
@@ -147,8 +135,8 @@
           </div>
 
 
-          <h1 class='article'>Automotive Strategy</h1>
-          <div class='articleOtherContent'>
+          <h1 id='article' class='accordion'>Automotive Strategy</h1>
+          <div class='articleOtherContent' id='articleOtherContent'>
               <p class='article'>Drive New and Recurring Revenue through Automotive Strategy</p>
               <p class='article'>We've come so far and we can still go further!</p>
               <p class='article'>More factory rep team meetings with Auto AEs and Hybrid AEs</p>
@@ -160,8 +148,8 @@
           </div>
 
 
-          <h1 class='article'>BluWave Video Strategy</h1>
-          <div class='articleOtherContent'>
+          <h1 id='article' class='accordion'>BluWave Video Strategy</h1>
+          <div class='articleOtherContent' id='articleOtherContent'>
               <p class='article'>Drive New and Recurring Revenue through BluWave Productions</p>
               <p class='article'>The production is delayed two weeks, two months, Comcast Spotlight loses monthly revenue.  How much can we save if we manage the process better?</p>
               <p class='article'>No orders placed in BluWave unless there is a signed contract</p>
@@ -174,6 +162,8 @@
               <p class='article'>Once resolution between LSM and Wes has been made, commercial must be completed within 24 hours</p>
               <p class='article'>If issues still occur, LSM escalates to DOS</p>
           </div>
+
+          <h1 class='backToTop' onClick='location.href="#logo"'>Back to Top</h1>
 
       </div>
   </div>
@@ -198,6 +188,31 @@
     <p style='position: absolute; bottom: 0; padding-left: 1%;'>&copy;2017 Gabe Ambrosio Design- All Rights Reserved</p>
 
   </footer>
+
+  <script>
+  var accordion = document.getElementsByClassName('accordion');
+  var i;
+
+  for(i=0; i < accordion.length; i++)
+  {
+    accordion[i].onclick = function()
+    {
+      this.classList.toggle('active');
+      var panel = this.nextElementSibling;
+      if(panel.style.maxHeight)
+      {
+        panel.style.maxHeight = null;
+      }
+      else
+      {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    }
+  }
+
+
+
+  </script>
 
 
 </body>

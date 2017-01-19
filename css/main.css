@@ -109,7 +109,7 @@ div.theVision {
 
 div.theVision.clicked {
   location.href = '#footer';
-  transition= 4s;
+  transition
 }
 
 div.theVisionDescription {

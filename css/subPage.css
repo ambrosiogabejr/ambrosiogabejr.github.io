@@ -79,7 +79,7 @@ a.topNavText:hover {
 p.imgText {
   position: absolute;
   top: 50%;
-  width: 100%;
+	width: 100%;
   left: 0;
   text-align: center;
   color: white;
@@ -147,7 +147,7 @@ p.topContent {
 
 div.article {
   position: relative;
-  display: inline-block;
+  display: inline-block
   width: 100%;
   text-align: center;
   background-color: white;
@@ -164,7 +164,7 @@ div.articleContent {
 }
 
 h1.article {
-  width: 100%;
+	width: 100%;
   left: 0;
   text-align: center;
   font-family: 'Oswald', sans-serif;
@@ -172,8 +172,63 @@ h1.article {
   padding: 2% 0%;
 }
 
-div.articleOtherContent {
+h1.accordion {
+  width: 100%;
+  left: 0;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 40px;
+  padding: 2% 0%;
+	transition: .4s;
+	cursor: pointer;
+}
+
+h1.accordion:after {
+	content: '\02795';
+	float: right;
+	font-size: 30px;
+	padding-right: 2%;
+}
+
+h1.accordion.active:after {
+	content: '\2212';
+	float: right;
+	font-size: 35px;
+	padding-right: 2%;
+}
+
+h1.accordion:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+h1.backToTop {
+	width: 100%;
+	left: 0;
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	font-size: 20px;
+	padding: 2% 0%;
+	cursor: pointer;
+	transition: 0.6s ease-in-out;
+}
+
+h1.backToTop:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+#articleOtherContent {
   position: relative;
+  background-color: #b6d5dd;
+  width: 60%;
+  left: 20%;
+  box-shadow: inset 10px -15px 20px #6da6b5;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 1s;
+}
+
+div.articleOtherContent {
+	position: relative;
   background-color: #b6d5dd;
   width: 60%;
   left: 20%;
