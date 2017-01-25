@@ -85,6 +85,12 @@ p.imgText {
   color: white;
   font-size: 80px;
   text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+	transition: .4s;
+	cursor: pointer;
+}
+
+p.imgText:hover {
+	background-color: rgba(255, 255, 255, .1);
 }
 
 
@@ -105,11 +111,6 @@ div.theVision {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-div.theVision.clicked {
-  location.href = '#footer';
-  transition
 }
 
 div.theVisionDescription {
@@ -179,7 +180,7 @@ div.currentSituation {
   position: relative;
   height: 75%;
   width: 100%;
-  background-image: url('../pictures/currentSituation.jpg');
+  background-image: url("../pictures/currentSituation.png");
 
   background-attachment: fixed;
   background-size: cover;
