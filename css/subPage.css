@@ -1,277 +1,552 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-	display: block;
+@media screen and (min-width: 500px) {
+
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed,
+		figure, figcaption, footer, header, hgroup,
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+			display: block;
+		}
+
+		h1, h2, h3, h4, h5 {
+		  font-family: 'Oswald', sans-serif;
+		}
+
+		p {
+		  font-family: 'Merriweather', serif;
+		}
+
+		h1 {
+		  font-size: 30px;
+		}
+
+		html, body {
+		  height: 100%;
+		  width: 100%;
+		}
+
+		header {
+		  position: relative;
+			width: 100%;
+			height: 10%;
+			background-color: #e6e6e6;
+			box-shadow: inset 0px -15px 20px #ccc;
+		}
+
+		div.logo {
+		  position: absolute;
+		  display: inline-block;
+		  top: 25%;
+		  left: 1%;
+		  width: 20%;
+		  height: 100%;
+		  font-size: 30px;
+		}
+
+		div.topNav {
+		  position: absolute;
+		  display: inline-block;
+		  text-align: center;
+		  left: 0;
+		  top: 25%;
+		  width: 100%;
+		}
+
+		a.topNavText {
+		  display: inline-block;
+		  text-align: center;
+		  font-size: 12px;
+		  padding: 1%;
+		  text-decoration: none;
+		}
+
+		a.topNavText:hover {
+		  color: blue;
+		}
+
+		p.imgText {
+		  position: absolute;
+		  top: 50%;
+			width: 100%;
+		  left: 0;
+		  text-align: center;
+		  color: white;
+		  font-size: 80px;
+		  text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+		}
+
+
+
+
+
+
+
+
+
+		div.mainPicture {
+		  position: relative;
+		  height: 90%;
+		  width: 100%;
+
+		  background-attachment: fixed;
+		  background-size: cover;
+		  background-repeat: no-repeat;
+		  background-position: center;
+		}
+
+		div.mainPictureDescription {
+		  display: block;
+		  overflow: auto;
+		  overflow: overlay;
+		  position: relative;
+		  height: 30%;
+		  width: 100%;
+		  background-color: #e6e6e6;
+		  box-shadow: inset 0px -15px 20px #ccc, inset 0px 15px 20px #ccc;
+		}
+
+		div.topContent {
+		  position: absolute;
+		  text-align: center;
+		  left: 25%;
+		  width: 50%;
+		  top: 5%;
+		}
+
+		h1.topContent {
+		  display: block;
+		  text-align: center;
+		  left: 0;
+		  width: 100%;
+		  top: 5%;
+		}
+
+		p.topContent {
+		  text-align: center;
+		  padding-top: 1%;
+		  left:0;
+		  top: 20%;
+		}
+
+
+
+
+
+
+		div.article {
+		  position: relative;
+		  display: inline-block
+		  width: 100%;
+		  text-align: center;
+		  background-color: white;
+		}
+
+		div.articleContent {
+		  position: relative;
+		  left: 15%;
+		  width: 75%;
+		  height: 100%;
+		  text-align: center;
+		  padding-bottom: 10%;
+		  box-shadow: 0px 0px 10px #6da6b5;
+		}
+
+		h1.article {
+			width: 100%;
+		  left: 0;
+		  text-align: center;
+		  font-family: 'Oswald', sans-serif;
+		  font-size: 40px;
+		  padding: 2% 0%;
+		}
+
+		h1.accordion {
+		  width: 100%;
+		  left: 0;
+		  text-align: center;
+		  font-family: 'Oswald', sans-serif;
+		  font-size: 40px;
+		  padding: 2% 0%;
+			transition: .4s;
+			cursor: pointer;
+		}
+
+		h1.accordion:after {
+			content: '\02795';
+			float: right;
+			font-size: 30px;
+			padding-right: 2%;
+		}
+
+		h1.accordion.active:after {
+			content: '\2212';
+			float: right;
+			font-size: 35px;
+			padding-right: 2%;
+		}
+
+		h1.accordion:hover {
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+
+		h1.backToTop {
+			width: 100%;
+			left: 0;
+			text-align: center;
+			font-family: 'Oswald', sans-serif;
+			font-size: 20px;
+			padding: 2% 0%;
+			cursor: pointer;
+			transition: 0.6s ease-in-out;
+		}
+
+		h1.backToTop:hover {
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+
+		#articleOtherContent {
+		  position: relative;
+		  background-color: #b6d5dd;
+		  width: 60%;
+		  left: 20%;
+		  box-shadow: inset 10px -15px 20px #6da6b5;
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 1s;
+		}
+
+		div.articleOtherContent {
+			position: relative;
+		  background-color: #b6d5dd;
+		  width: 60%;
+		  left: 20%;
+		  box-shadow: inset 10px -15px 20px #6da6b5;
+		}
+
+		p.article {
+		  font-size: 24px;
+		  padding: 3%;
+			text-align: left;
+		}
+
+
+
+
+
+
+		footer {
+		  position: relative;
+		  background-color: #b6d5dd;
+		  width: 100%;
+		  height: 33%;
+		}
+
+		div.contact, div.connect {
+		  position: absolute;
+		  margin-top: 1%;
+		  margin-left: 1%;
+		  width: 29%;
+		  height: 90%;
+		}
+
+		div.connect {
+		  left: 32%;
+		}
+
+		h1.inTouch, p.inTouch {
+		  text-align: left;
+		  padding-left: 1%;
+		  padding-top: 2%;
+		}
+
+		p.connect {
+		  display: inline-block;
+		  font-size: 18px;
+		}
+
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: 'Oswald', sans-serif;
-}
+@media screen and (max-width: 500px) {
 
-p {
-  font-family: 'Merriweather', serif;
-}
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed,
+		figure, figcaption, footer, header, hgroup,
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+			display: block;
+		}
 
-h1 {
-  font-size: 30px;
-}
+		h1, h2, h3, h4, h5 {
+			font-family: 'Oswald', sans-serif;
+		}
 
-html, body {
-  height: 100%;
-  width: 100%;
-}
+		p {
+			font-family: 'Merriweather', serif;
+		}
 
-header {
-  position: relative;
-	width: 100%;
-	height: 10%;
-	background-color: #e6e6e6;
-	box-shadow: inset 0px -15px 20px #ccc;
-}
+		h1 {
+			font-size: 30px;
+		}
 
-div.logo {
-  position: absolute;
-  display: inline-block;
-  top: 25%;
-  left: 1%;
-  width: 20%;
-  height: 100%;
-  font-size: 30px;
-}
+		html, body {
+			height: 100%;
+			width: 100%;
+		}
 
-div.topNav {
-  position: absolute;
-  display: inline-block;
-  text-align: center;
-  left: 0;
-  top: 25%;
-  width: 100%;
-}
+		header {
+			position: relative;
+			width: 100%;
+			height: 10%;
+			background-color: #e6e6e6;
+			box-shadow: inset 0px -15px 20px #ccc;
+		}
 
-a.topNavText {
-  display: inline-block;
-  text-align: center;
-  font-size: 12px;
-  padding: 1%;
-  text-decoration: none;
-}
+		div.logo {
+			display: none;
+		}
 
-a.topNavText:hover {
-  color: blue;
-}
+		div.topNav {
+			position: absolute;
+			display: inline-block;
+			text-align: center;
+			left: 0;
+			top: 25%;
+			width: 100%;
+		}
 
-p.imgText {
-  position: absolute;
-  top: 50%;
-	width: 100%;
-  left: 0;
-  text-align: center;
-  color: white;
-  font-size: 80px;
-  text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
-}
+		a.topNavText {
+			display: inline-block;
+			text-align: center;
+			font-size: 12px;
+			padding: 1%;
+			text-decoration: none;
+		}
 
+		a.topNavText:hover {
+			color: blue;
+		}
 
-
-
-
-
-
-
-
-div.mainPicture {
-  position: relative;
-  height: 90%;
-  width: 100%;
-
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-div.mainPictureDescription {
-  display: block;
-  overflow: auto;
-  overflow: overlay;
-  position: relative;
-  height: 30%;
-  width: 100%;
-  background-color: #e6e6e6;
-  box-shadow: inset 0px -15px 20px #ccc, inset 0px 15px 20px #ccc;
-}
-
-div.topContent {
-  position: absolute;
-  text-align: center;
-  left: 25%;
-  width: 50%;
-  top: 5%;
-}
-
-h1.topContent {
-  display: block;
-  text-align: center;
-  left: 0;
-  width: 100%;
-  top: 5%;
-}
-
-p.topContent {
-  text-align: center;
-  padding-top: 1%;
-  left:0;
-  top: 20%;
-}
+		p.imgText {
+			position: absolute;
+			top: 50%;
+			width: 100%;
+			left: 0;
+			text-align: center;
+			color: white;
+			font-size: 40px;
+			text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+		}
 
 
 
 
 
 
-div.article {
-  position: relative;
-  display: inline-block
-  width: 100%;
-  text-align: center;
-  background-color: white;
-}
 
-div.articleContent {
-  position: relative;
-  left: 15%;
-  width: 75%;
-  height: 100%;
-  text-align: center;
-  padding-bottom: 10%;
-  box-shadow: 0px 0px 10px #6da6b5;
-}
 
-h1.article {
-	width: 100%;
-  left: 0;
-  text-align: center;
-  font-family: 'Oswald', sans-serif;
-  font-size: 40px;
-  padding: 2% 0%;
-}
 
-h1.accordion {
-  width: 100%;
-  left: 0;
-  text-align: center;
-  font-family: 'Oswald', sans-serif;
-  font-size: 40px;
-  padding: 2% 0%;
-	transition: .4s;
-	cursor: pointer;
-}
+		div.mainPicture {
+			position: relative;
+			height: 90%;
+			width: 100%;
 
-h1.accordion:after {
-	content: '\02795';
-	float: right;
-	font-size: 30px;
-	padding-right: 2%;
-}
+			background-attachment: fixed;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
 
-h1.accordion.active:after {
-	content: '\2212';
-	float: right;
-	font-size: 35px;
-	padding-right: 2%;
-}
+		div.mainPictureDescription {
+			display: block;
+			overflow: auto;
+			overflow: overlay;
+			position: relative;
+			height: 80%;
+			width: 100%;
+			background-color: #e6e6e6;
+			box-shadow: inset 0px -15px 20px #ccc, inset 0px 15px 20px #ccc;
+		}
 
-h1.accordion:hover {
-	background-color: rgba(0, 0, 0, 0.1);
-}
+		div.topContent {
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			top: 1%;
+		}
 
-h1.backToTop {
-	width: 100%;
-	left: 0;
-	text-align: center;
-	font-family: 'Oswald', sans-serif;
-	font-size: 20px;
-	padding: 2% 0%;
-	cursor: pointer;
-	transition: 0.6s ease-in-out;
-}
+		h1.topContent {
+			display: block;
+			text-align: center;
+			left: 0;
+			width: 100%;
+			top: 1%;
+		}
 
-h1.backToTop:hover {
-	background-color: rgba(0, 0, 0, 0.1);
-}
-
-#articleOtherContent {
-  position: relative;
-  background-color: #b6d5dd;
-  width: 60%;
-  left: 20%;
-  box-shadow: inset 10px -15px 20px #6da6b5;
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height 1s;
-}
-
-div.articleOtherContent {
-	position: relative;
-  background-color: #b6d5dd;
-  width: 60%;
-  left: 20%;
-  box-shadow: inset 10px -15px 20px #6da6b5;
-}
-
-p.article {
-  font-size: 24px;
-  padding: 3%;
-	text-align: left;
-}
+		p.topContent {
+			text-align: center;
+			padding-top: 1%;
+			left:0;
+			top: 20%;
+		}
 
 
 
 
 
 
-footer {
-  position: relative;
-  background-color: #b6d5dd;
-  width: 100%;
-  height: 33%;
-}
+		div.article {
+			position: relative;
+			display: inline-block
+			width: 100%;
+			text-align: center;
+			background-color: white;
+		}
 
-div.contact, div.connect {
-  position: absolute;
-  margin-top: 1%;
-  margin-left: 1%;
-  width: 29%;
-  height: 90%;
-}
+		div.articleContent {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			padding-bottom: 10%;
+			box-shadow: 0px 0px 10px #6da6b5;
+		}
 
-div.connect {
-  left: 32%;
-}
+		h1.article {
+			width: 100%;
+			text-align: center;
+			font-family: 'Oswald', sans-serif;
+			font-size: 35px;
+			padding: 2% 0%;
+		}
 
-h1.inTouch, p.inTouch {
-  text-align: left;
-  padding-left: 1%;
-  padding-top: 2%;
-}
+		h1.accordion {
+			width: 100%;
+			left: 0;
+			text-align: center;
+			font-family: 'Oswald', sans-serif;
+			font-size: 35px;
+			padding: 2% 0%;
+			transition: .4s;
+			cursor: pointer;
+		}
 
-p.connect {
-  display: inline-block;
-  font-size: 18px;
+		h1.accordion:after {
+			content: '\02795';
+			float: right;
+			font-size: 30px;
+			padding-right: 2%;
+		}
+
+		h1.accordion.active:after {
+			content: '\2212';
+			float: right;
+			font-size: 35px;
+			padding-right: 2%;
+		}
+
+		h1.accordion:hover {
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+
+		h1.backToTop {
+			width: 100%;
+			left: 0;
+			text-align: center;
+			font-family: 'Oswald', sans-serif;
+			font-size: 20px;
+			padding: 2% 0%;
+			cursor: pointer;
+			transition: 0.6s ease-in-out;
+		}
+
+		h1.backToTop:hover {
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+
+		#articleOtherContent {
+			position: relative;
+			background-color: #b6d5dd;
+			width: 60%;
+			left: 20%;
+			box-shadow: inset 10px -15px 20px #6da6b5;
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 1s;
+		}
+
+		div.articleOtherContent {
+			position: relative;
+			background-color: #b6d5dd;
+			width: 100%;
+			box-shadow: inset 10px -15px 20px #6da6b5;
+		}
+
+		p.article {
+			font-size: 20px;
+			padding: 3%;
+			text-align: left;
+		}
+
+
+
+
+
+
+		footer {
+			position: relative;
+			background-color: #b6d5dd;
+			width: 100%;
+			height: 50%;
+		}
+
+		div.contact, div.connect {
+			position: absolute;
+			margin-top: 1%;
+			margin-left: 1%;
+			width: 50%;
+			height: 90%;
+		}
+
+		div.connect {
+			left: 50%;
+		}
+
+		h1.inTouch, p.inTouch {
+			text-align: left;
+			padding-left: 1%;
+			padding-top: 2%;
+		}
+
+		p.connect {
+			display: inline-block;
+			font-size: 18px;
+		}
 }
