@@ -306,7 +306,8 @@
 		}
 
 		div.logo {
-			display: none;
+			width: 0;
+			overflow-x: hidden;
 		}
 
 		div.topNav {
