@@ -47,6 +47,15 @@
 			box-shadow: inset 0px -15px 20px #ccc;
 		}
 
+		img.picture {
+			position: absolute;
+			right: .5%;
+			z-index: 100;
+			width: 8%;
+			height: 150%;
+			box-shadow: 5px 10px 10px black;
+		}
+
 		div.logo {
 		  position: absolute;
 		  display: inline-block;
@@ -164,10 +173,27 @@
 		}
 
 		div.thePathwayDescription {
+			position: relative;
 		  height: 25%;
 		  width: 100%;
 		  background-color:#e6e6e6;
 		  box-shadow: inset 0px -15px 20px #ccc, inset 0px 15px 20px #ccc;
+		}
+
+		div.topContent {
+		  position: absolute;
+		  text-align: center;
+		  left: 25%;
+		  width: 50%;
+		  top: 5%;
+		}
+
+		h1.topContent {
+		  display: block;
+		  text-align: center;
+		  left: 0;
+		  width: 100%;
+		  top: 5%;
 		}
 
 
@@ -191,6 +217,7 @@
 		}
 
 		div.currentDescription {
+			position: relative;
 		  width: 100%;
 		  height: 25%;
 		  background-color: #e6e6e6;
@@ -214,10 +241,37 @@
 		}
 
 		div.landscapeDescription {
+			position: relative;
 		  width: 100%;
 		  height: 25%;
 		  background-color: #e6e6e6;
 		  box-shadow: inset 0px -15px 20px #ccc, inset 0px 15px 20px #ccc;
+		}
+
+
+
+
+
+		div.roadMap {
+		  position: relative;
+		  width: 100%;
+		  height: 75%;
+		  background-image: url('../pictures/roadMap.jpg');
+
+		  background-attachment: fixed;
+		  background-size: cover;
+		  background-repeat: no-repeat;
+		  background-position: center;
+		}
+
+
+
+		div.roadMapDescription {
+			position: relative;
+			width: 100%;
+			height: 25%;
+			background-color: #e6e6e6;
+			box-shadow: inset 0px -15px 20px #ccc, inset 0px 15px 20px #ccc;
 		}
 
 

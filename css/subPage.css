@@ -47,6 +47,15 @@
 			box-shadow: inset 0px -15px 20px #ccc;
 		}
 
+		img.picture {
+			position: absolute;
+			right: .5%;
+			z-index: 100;
+			width: 8%;
+			height: 150%;
+			box-shadow: 5px 10px 10px black;
+		}
+
 		div.logo {
 		  position: absolute;
 		  display: inline-block;
@@ -179,7 +188,7 @@
 		  left: 0;
 		  text-align: center;
 		  font-family: 'Oswald', sans-serif;
-		  font-size: 40px;
+		  font-size: 30px;
 		  padding: 2% 0%;
 			transition: .4s;
 			cursor: pointer;
@@ -241,6 +250,16 @@
 		  font-size: 24px;
 		  padding: 3%;
 			text-align: left;
+		}
+
+		p.articleList {
+			font-size: 24px;
+			text-align: left;
+			padding-left: 5%;
+			margin-top: 3%;
+			display: list-item;
+			margin-left: 10%;
+			padding: 0;
 		}
 
 
